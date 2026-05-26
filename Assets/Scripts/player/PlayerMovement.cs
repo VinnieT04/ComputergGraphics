@@ -1,14 +1,13 @@
-using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.Scripting.APIUpdating;
 
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 12f;
     public float gravity = -9.81f;
-
     public float jumpHeight = 3f;
+    public float doubleJumpMultiplier = 0.65f;
+    bool hasDoubleJump;
 
     // Coyote Time
     public float coyoteTime = 0.15f;
@@ -18,38 +17,34 @@ public class PlayerMovement : MonoBehaviour
     public float jumpBufferTime = 0.15f;
     float jumpBufferTimer;
 
-
     // Dash
     public float dashSpeed = 25f;
     public float dashTime = 0.2f;
-
     float dashTimer;
     bool isDashing;
-
     public int maxDashes = 1;
     int currentDashes;
-
     float launchTimer;
+
+    // Inertia
+    public float groundFriction = 8f;   // higher = snappier, lower = icier
+    public float airControl = 0.3f;     // 0 = no air control, 1 = full control
+    Vector3 currentMove;                // the smoothed movement vector
 
     Vector3 velocity;
     bool isGrounded;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    // Update is called once per frame
+    void Start() { }
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
-        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         isGrounded = controller.isGrounded;
 
         if (isGrounded)
         {
             coyoteTimer = coyoteTime;
             currentDashes = maxDashes;
+            hasDoubleJump = true;
         }
         else
         {
@@ -63,78 +58,73 @@ public class PlayerMovement : MonoBehaviour
             currentDashes--;
         }
 
-        // Jump buffer input
+        // Jump buffer
         if (Input.GetButtonDown("Jump"))
-        {
             jumpBufferTimer = jumpBufferTime;
-        }
         else
-        {
             jumpBufferTimer -= Time.deltaTime;
-        }
 
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -1f;
-        }
+        if (isGrounded && velocity.y < 0)
+            velocity.y = -2f;
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        // Jump condition
+        // Raw input direction — used for dash (where you intend to go)
+        Vector3 targetMove = transform.right * x + transform.forward * z;
+
+        // In air: lerp slower (harder to redirect) but toward full speed target
+        float lerpSpeed = isGrounded ? groundFriction : groundFriction * airControl;
+        currentMove = Vector3.Lerp(currentMove, targetMove, Time.deltaTime * lerpSpeed);
+
+        // Jump
         if (coyoteTimer > 0f && jumpBufferTimer > 0f)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-
-            // Reset timers so it doesn't double trigger
             jumpBufferTimer = 0f;
             coyoteTimer = 0f;
         }
-
-        if (Input.GetButtonUp("Jump") && velocity.y > 0)
+        else if (hasDoubleJump && jumpBufferTimer > 0f && !isGrounded)
         {
-            velocity.y *= 0.7f;
+            velocity.y = Mathf.Sqrt(jumpHeight * doubleJumpMultiplier * -2f * gravity);
+            jumpBufferTimer = 0f;
+            hasDoubleJump = false;
         }
 
-        
-        
+        if (Input.GetButtonUp("Jump") && velocity.y > 0)
+            velocity.y *= 0.7f;
 
-        Vector3 move = transform.right * x + transform.forward * z;
         Vector3 finalMovementVector;
 
         if (isDashing)
         {
             dashTimer -= Time.deltaTime;
 
-            Vector3 dashDirection = move.normalized;
-            dashDirection.y *= 0.3f; // reduce vertical influence
+            // Dash uses targetMove (raw input) not currentMove, so it feels responsive
+            Vector3 dashDirection = targetMove.normalized;
+            dashDirection.y *= 0.3f;
             dashDirection = dashDirection.normalized;
-            
-            if(dashDirection == Vector3.zero)
-            {
+
+            if (dashDirection == Vector3.zero)
                 dashDirection = transform.forward;
-            }
 
             finalMovementVector = dashDirection * dashSpeed;
-            finalMovementVector.y = velocity.y +2f;
+            finalMovementVector.y = velocity.y + 2f;
 
-            if(dashTimer <= 0f)
-            {
+            if (dashTimer <= 0f)
                 isDashing = false;
-            }
         }
         else
         {
             if (launchTimer > 0)
-            {
                 launchTimer -= Time.deltaTime;
-            }
             else
-            {
                 velocity.y += gravity * Time.deltaTime;
-            }
-            finalMovementVector = move * speed + velocity;
+
+            // Use currentMove (smoothed) for normal movement
+            finalMovementVector = currentMove * speed + velocity;
         }
+
         controller.Move(finalMovementVector * Time.deltaTime);
     }
 
@@ -143,8 +133,7 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = force.y;
         Vector3 horizontal = new Vector3(force.x, 0, force.z);
         controller.Move(horizontal * Time.deltaTime);
-
-        launchTimer = 0.2f; // duration of launch
+        launchTimer = 0.2f;
         Debug.Log("LAUNCH CALLED: " + force);
     }
 }
