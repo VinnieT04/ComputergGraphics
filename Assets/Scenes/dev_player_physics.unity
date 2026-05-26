@@ -1032,9 +1032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 1136616196}
-  speed: 12
-  gravity: -9.81
-  jumpHeight: 3
+  speed: 3
+  gravity: -2.81
+  jumpHeight: 2.4
   coyoteTime: 0.15
   jumpBufferTime: 0.15
   dashSpeed: 25
