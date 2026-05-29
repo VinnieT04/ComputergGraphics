@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashTime = 0.2f;
     float dashTimer;
     bool isDashing;
+    public bool IsDashing => isDashing;
     public int maxDashes = 1;
     int currentDashes;
     float launchTimer;
@@ -31,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     public float airControl = 0.3f;     // 0 = no air control, 1 = full control
     Vector3 currentMove;                // the smoothed movement vector
 
+    // Damaged state
+    public bool isDamaged = true;       // starts true, repair station sets to false
+    public float damagedSpeedMultiplier = 0.5f;
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -38,6 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))    //testing Damaged state. Press T to change Hurt/Unhurt movement of player
+        isDamaged = !isDamaged;
+
         isGrounded = controller.isGrounded;
 
         if (isGrounded)
@@ -51,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             coyoteTimer -= Time.deltaTime;
         }
 
-        if (!isGrounded && Input.GetKeyDown(KeyCode.LeftShift) && currentDashes > 0)
+        if (!isDamaged && !isGrounded && Input.GetKeyDown(KeyCode.LeftShift) && currentDashes > 0)
         {
             isDashing = true;
             dashTimer = dashTime;
@@ -78,13 +86,13 @@ public class PlayerMovement : MonoBehaviour
         currentMove = Vector3.Lerp(currentMove, targetMove, Time.deltaTime * lerpSpeed);
 
         // Jump
-        if (coyoteTimer > 0f && jumpBufferTimer > 0f)
+        if (!isDamaged && coyoteTimer > 0f && jumpBufferTimer > 0f)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jumpBufferTimer = 0f;
             coyoteTimer = 0f;
         }
-        else if (hasDoubleJump && jumpBufferTimer > 0f && !isGrounded)
+        else if (!isDamaged && hasDoubleJump && jumpBufferTimer > 0f && !isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * doubleJumpMultiplier * -2f * gravity);
             jumpBufferTimer = 0f;
