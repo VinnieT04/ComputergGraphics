@@ -51,6 +51,8 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public float GetSuitIntegrity() => currentSuitIntegrity;
+
     public void RepairSuit()
     {
         currentSuitIntegrity = maxSuitIntegrity;
