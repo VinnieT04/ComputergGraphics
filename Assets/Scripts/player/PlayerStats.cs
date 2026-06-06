@@ -16,11 +16,12 @@ public class PlayerStats : MonoBehaviour
     PlayerMovement playerMovement;
 
     void Start()
-    {
-        currentOxygen = maxOxygen;
-        currentSuitIntegrity = maxSuitIntegrity;
-        playerMovement = GetComponent<PlayerMovement>();
-    }
+{
+    currentOxygen = maxOxygen;
+    currentSuitIntegrity = maxSuitIntegrity;
+    playerMovement = GetComponent<PlayerMovement>();
+    RepairStation.respawnPoint = transform.position; // default respawn
+}
 
     void Update()
     {
@@ -51,6 +52,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public float GetSuitIntegrity() => currentSuitIntegrity;
     public void RepairSuit()
     {
         currentSuitIntegrity = maxSuitIntegrity;
@@ -73,9 +75,12 @@ public class PlayerStats : MonoBehaviour
     }
 
     void Die()
-    {
-        Debug.Log("Player died - respawn at last safe zone");
-        // respawn logic goes here later
-        RefillAll();
-    }
+{
+    Debug.Log("Player died - respawning at last repair station");
+    CharacterController cc = GetComponent<CharacterController>();
+    cc.enabled = false;
+    transform.position = RepairStation.respawnPoint;
+    cc.enabled = true;
+    RefillAll();
+}
 }

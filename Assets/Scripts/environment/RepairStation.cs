@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RepairStation : MonoBehaviour
 {
+    public static Vector3 respawnPoint; // shared across all repair stations
+
     public float holdTime = 3f;
     float holdTimer = 0f;
     bool playerInRange = false;
@@ -22,8 +24,9 @@ public class RepairStation : MonoBehaviour
             {
                 playerStats.RepairSuit();
                 playerMovement.isDamaged = false;
+                respawnPoint = transform.position;  // save this as respawn point
                 holdTimer = 0f;
-                Debug.Log("Suit fully repaired. Abilities restored.");
+                Debug.Log("Suit repaired. Respawn point saved.");
             }
         }
         else
@@ -49,7 +52,6 @@ public class RepairStation : MonoBehaviour
         {
             playerInRange = false;
             holdTimer = 0f;
-            Debug.Log("Left repair station range.");
         }
     }
 }
