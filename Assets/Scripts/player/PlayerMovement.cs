@@ -36,8 +36,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isDamaged = true;       // starts true, repair station sets to false
     public float damagedSpeedMultiplier = 0.5f;
 
-    private bool isOnJumpableSurface = false;
-
     Vector3 velocity;
     bool isGrounded;
 
@@ -48,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))    //testing Damaged state. Press T to change Hurt/Unhurt movement of player
         isDamaged = !isDamaged;
 
-        isGrounded = controller.isGrounded || isOnJumpableSurface;
+        isGrounded = controller.isGrounded;
 
         if (isGrounded)
         {
@@ -146,16 +144,5 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(horizontal * Time.deltaTime);
         launchTimer = 0.2f;
         Debug.Log("LAUNCH CALLED: " + force);
-    }
-
-    void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.normal.y > 0.6f)
-        {
-            if (hit.gameObject.CompareTag("jumpable"))
-                isOnJumpableSurface = true;
-            else
-                isOnJumpableSurface = false;
-        }
     }
 }
