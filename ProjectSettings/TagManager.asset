@@ -6,6 +6,9 @@ TagManager:
   tags:
   - jumpable
   - geiser
+  - plant
+  - checkpoint
+  - repair
   layers:
   - Default
   - TransparentFX

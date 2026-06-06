@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1124877348866935649}
   - component: {fileID: 4049728273001202884}
   - component: {fileID: 2294426923981811726}
+  - component: {fileID: 4091304015562655148}
   m_Layer: 0
   m_Name: SP_Tree03
   m_TagString: Untagged
@@ -90,6 +91,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4091304015562655148
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348902878156984795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}
 --- !u!1 &388670497439939026
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,6 +124,7 @@ GameObject:
   - component: {fileID: 1022041612792144744}
   - component: {fileID: 4143556830190873805}
   - component: {fileID: 2189921163830581255}
+  - component: {fileID: 1630665669625727853}
   m_Layer: 0
   m_Name: SP_Tree03 (3)
   m_TagString: Untagged
@@ -180,6 +204,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1630665669625727853
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388670497439939026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}
 --- !u!1 &605596383218288613
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +237,7 @@ GameObject:
   - component: {fileID: 228647974862626143}
   - component: {fileID: 3784019339569763066}
   - component: {fileID: 1398225587525609008}
+  - component: {fileID: 5880324338017742402}
   m_Layer: 0
   m_Name: SP_Plant07
   m_TagString: Untagged
@@ -270,6 +317,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5880324338017742402
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605596383218288613}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2216403135039299858, guid: 71741600c6852d64782fe028d92ab198, type: 3}
 --- !u!1 &754821448162028259
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,6 +350,7 @@ GameObject:
   - component: {fileID: 86266269342068825}
   - component: {fileID: 3935478817903378428}
   - component: {fileID: 1259132591209220918}
+  - component: {fileID: 9022717420212450603}
   m_Layer: 0
   m_Name: SP_Tree02
   m_TagString: Untagged
@@ -360,6 +430,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9022717420212450603
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754821448162028259}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8048736463924452069, guid: a6c0e1f93dda7234c9d0bec8cf7c2445, type: 3}
 --- !u!1 &1063434382908997032
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +553,7 @@ GameObject:
   - component: {fileID: 1973473239336180043}
   - component: {fileID: 3228224283516884718}
   - component: {fileID: 803896554116129316}
+  - component: {fileID: 2314087009995236858}
   m_Layer: 0
   m_Name: SP_Plant08
   m_TagString: Untagged
@@ -540,6 +633,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2314087009995236858
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164461807238054897}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2915820140956423877, guid: ad8d03264f293334b99332141028e155, type: 3}
 --- !u!1 &1777817151141156387
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +846,7 @@ GameObject:
   - component: {fileID: 1581912265064838133}
   - component: {fileID: 2475800326822362192}
   - component: {fileID: 414111324815624346}
+  - component: {fileID: 7483027954531409077}
   m_Layer: 0
   m_Name: SP_Plant01
   m_TagString: Untagged
@@ -810,6 +926,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7483027954531409077
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215705589209999695}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4547811374838066057, guid: 1aa6aceaedfb04f4da6f443633f18585, type: 3}
 --- !u!1 &2440299234273645465
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +959,7 @@ GameObject:
   - component: {fileID: 3068780478157392163}
   - component: {fileID: 2105894623635736198}
   - component: {fileID: 4241637998563062348}
+  - component: {fileID: 1685771605560565575}
   m_Layer: 0
   m_Name: SP_Tree03 (5)
   m_TagString: Untagged
@@ -900,6 +1039,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1685771605560565575
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440299234273645465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}
 --- !u!1 &2509808378592794313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1176,7 @@ Transform:
   m_GameObject: {fileID: 2918649772712910450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 433.32266, y: -0, z: 706.0065}
+  m_LocalPosition: {x: 433.32266, y: -0, z: 709.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1242,6 +1403,7 @@ GameObject:
   - component: {fileID: 4287888892451366873}
   - component: {fileID: 877779371155728508}
   - component: {fileID: 3155485010668543158}
+  - component: {fileID: 5653988757623274804}
   m_Layer: 0
   m_Name: SP_Tree02 (1)
   m_TagString: Untagged
@@ -1321,6 +1483,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5653988757623274804
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515750647319788899}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8048736463924452069, guid: a6c0e1f93dda7234c9d0bec8cf7c2445, type: 3}
 --- !u!1 &3647227431182073251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1516,7 @@ GameObject:
   - component: {fileID: 4167622592638396185}
   - component: {fileID: 1043011296591980732}
   - component: {fileID: 2998678779842616438}
+  - component: {fileID: 7207602665552240787}
   m_Layer: 0
   m_Name: SP_Plant07 (2)
   m_TagString: Untagged
@@ -1411,6 +1596,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7207602665552240787
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647227431182073251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2216403135039299858, guid: 71741600c6852d64782fe028d92ab198, type: 3}
 --- !u!1 &4488362164513795808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1629,7 @@ GameObject:
   - component: {fileID: 3819629964602750042}
   - component: {fileID: 193046352125148159}
   - component: {fileID: 2686715948077567797}
+  - component: {fileID: 5994006115768452183}
   m_Layer: 0
   m_Name: SP_Tree03 (2)
   m_TagString: Untagged
@@ -1501,6 +1709,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5994006115768452183
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4488362164513795808}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}
 --- !u!1 &4747894414378301810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1832,7 @@ GameObject:
   - component: {fileID: 5509351943710010837}
   - component: {fileID: 8924724829248971376}
   - component: {fileID: 6646761900592764602}
+  - component: {fileID: 5508295377477984099}
   m_Layer: 0
   m_Name: SP_Tree04
   m_TagString: Untagged
@@ -1681,6 +1912,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5508295377477984099
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5133811979969967983}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 668869569556866777, guid: d31ffb30d0b47b4478856fedefa96c19, type: 3}
 --- !u!1 &5415481385599914650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +2125,7 @@ GameObject:
   - component: {fileID: 4942511651232306545}
   - component: {fileID: 8302543951812975316}
   - component: {fileID: 6114895390575799838}
+  - component: {fileID: 3273538232199167531}
   m_Layer: 0
   m_Name: SP_Tree03 (1)
   m_TagString: Untagged
@@ -1951,6 +2205,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3273538232199167531
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754620133311909835}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}
 --- !u!1 &6163811663030722040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +2238,7 @@ GameObject:
   - component: {fileID: 6827899727169406786}
   - component: {fileID: 7597090113434437863}
   - component: {fileID: 5659545325488356397}
+  - component: {fileID: 6388587360880621757}
   m_Layer: 0
   m_Name: SP_Tree02 (2)
   m_TagString: Untagged
@@ -2041,6 +2318,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6388587360880621757
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163811663030722040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8048736463924452069, guid: a6c0e1f93dda7234c9d0bec8cf7c2445, type: 3}
 --- !u!1 &7063362028494936572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,6 +2351,7 @@ GameObject:
   - component: {fileID: 7587944130582152006}
   - component: {fileID: 6837046351278312675}
   - component: {fileID: 8720910784747796521}
+  - component: {fileID: 7354757904588999749}
   m_Layer: 0
   m_Name: SP_Tree01
   m_TagString: Untagged
@@ -2131,6 +2431,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7354757904588999749
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063362028494936572}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8455500279230991522, guid: 7e73add8250c34a43931c90e0051994b, type: 3}
 --- !u!1 &7151245448051266874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2464,7 @@ GameObject:
   - component: {fileID: 7527066886493294464}
   - component: {fileID: 6906930703058255909}
   - component: {fileID: 8664555872117470447}
+  - component: {fileID: 250898793586330514}
   m_Layer: 0
   m_Name: SP_Plant07 (1)
   m_TagString: Untagged
@@ -2221,6 +2544,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &250898793586330514
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151245448051266874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2216403135039299858, guid: 71741600c6852d64782fe028d92ab198, type: 3}
 --- !u!1 &7249852532453555151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,6 +2847,7 @@ GameObject:
   - component: {fileID: 9042130249192048619}
   - component: {fileID: 5391866590145218638}
   - component: {fileID: 7869817497069288580}
+  - component: {fileID: 4073305019859243159}
   m_Layer: 0
   m_Name: SP_Plant08 (1)
   m_TagString: Untagged
@@ -2581,6 +2927,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4073305019859243159
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518498365667302737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2915820140956423877, guid: ad8d03264f293334b99332141028e155, type: 3}
 --- !u!1 &8879333154422670810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,6 +2960,7 @@ GameObject:
   - component: {fileID: 8102656160186113888}
   - component: {fileID: 5178490087914672325}
   - component: {fileID: 6933650091707851791}
+  - component: {fileID: 2727090268778258515}
   m_Layer: 0
   m_Name: SP_Tree01 (1)
   m_TagString: Untagged
@@ -2671,6 +3040,28 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2727090268778258515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879333154422670810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8455500279230991522, guid: 7e73add8250c34a43931c90e0051994b, type: 3}
 --- !u!1 &9210743532093364901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2682,6 +3073,7 @@ GameObject:
   - component: {fileID: 8401732138027089951}
   - component: {fileID: 4843385316814983098}
   - component: {fileID: 7265394720510671728}
+  - component: {fileID: 3365764729235557020}
   m_Layer: 0
   m_Name: SP_Tree03 (4)
   m_TagString: Untagged
@@ -2761,3 +3153,25 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3365764729235557020
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210743532093364901}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6771101535060161660, guid: 135fa340b65c75f4baf2068625e534ec, type: 3}

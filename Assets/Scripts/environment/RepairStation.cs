@@ -7,6 +7,7 @@ public class RepairStation : MonoBehaviour
     bool playerInRange = false;
 
     PlayerStats playerStats;
+    PlayerMovement playerMovement;
 
     void Update()
     {
@@ -20,6 +21,7 @@ public class RepairStation : MonoBehaviour
             if (holdTimer >= holdTime)
             {
                 playerStats.RepairSuit();
+                playerMovement.isDamaged = false;
                 holdTimer = 0f;
                 Debug.Log("Suit fully repaired. Abilities restored.");
             }
@@ -35,6 +37,7 @@ public class RepairStation : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerStats = other.GetComponent<PlayerStats>();
+            playerMovement = other.GetComponent<PlayerMovement>();
             playerInRange = true;
             Debug.Log("Near repair station. Hold E to repair.");
         }
