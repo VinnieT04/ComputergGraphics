@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Landscape_rock_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f4c903b65e7e3fb44bd6dd4a4a95dc7c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
