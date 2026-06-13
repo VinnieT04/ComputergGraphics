@@ -9,6 +9,15 @@ public class OxygenVent : MonoBehaviour
 
     PlayerStats playerStats;
 
+    [Header("Audio")]
+    public AudioClip healingSound;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (!playerInRange) return;
@@ -23,8 +32,11 @@ public class OxygenVent : MonoBehaviour
             {
                 playerStats.RefillOxygen(playerStats.maxOxygen);
                 holdTimer = 0f;
-                //isRefilling = false;  /UI later
+                //isRefilling = false;  //UI later
                 Debug.Log("Oxygen fully refilled.");
+
+                if (audioSource != null && healingSound != null)
+                    audioSource.PlayOneShot(healingSound);
             }
         }
         else

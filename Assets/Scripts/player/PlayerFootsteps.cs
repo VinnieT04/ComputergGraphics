@@ -17,6 +17,7 @@ public class PlayerFootsteps : MonoBehaviour
     private CharacterController controller;
     private float stepTimer;
     private bool wasGrounded;
+    private bool wasDashing;
 
     void Start()
     {
@@ -35,11 +36,20 @@ public class PlayerFootsteps : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
             PlayJumpStart();
 
+        // Double Jump — usa el mismo sonido de salto
+        if (Input.GetButtonDown("Jump") && !isGrounded && !isDashing)
+            PlayJumpStart();
+
         // Jump Land — detecta cuando toca el suelo después de estar en el aire
         if (!wasGrounded && isGrounded)
             PlayJumpLand();
 
+        // Dash — usa sonido de run al iniciar
+        if (!wasDashing && isDashing)
+            PlayDash();
+
         wasGrounded = isGrounded;
+        wasDashing = isDashing;
 
         // Footsteps — solo si está en el suelo, moviéndose y sin dash
         if (!isGrounded || !isMoving || isDashing)
@@ -58,9 +68,8 @@ public class PlayerFootsteps : MonoBehaviour
 
     void PlayFootstep()
     {
-        AudioClip[] clips = rockRunClips;
-        if (clips.Length == 0) return;
-        audioSource.PlayOneShot(clips[Random.Range(0, clips.Length)]);
+        if (rockRunClips.Length == 0) return;
+        audioSource.PlayOneShot(rockWalkClips[Random.Range(0, rockRunClips.Length)]);
     }
 
     public void PlayJumpStart()
@@ -73,5 +82,11 @@ public class PlayerFootsteps : MonoBehaviour
     {
         if (rockJumpLandClips.Length == 0) return;
         audioSource.PlayOneShot(rockJumpLandClips[Random.Range(0, rockJumpLandClips.Length)]);
+    }
+
+    void PlayDash()
+    {
+        if (rockRunClips.Length == 0) return;
+        audioSource.PlayOneShot(rockRunClips[Random.Range(0, rockRunClips.Length)]);
     }
 }

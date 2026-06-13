@@ -11,6 +11,15 @@ public class RepairStation : MonoBehaviour
     PlayerStats playerStats;
     PlayerMovement playerMovement;
 
+    [Header("Audio")]
+    public AudioClip repairSound;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (!playerInRange) return;
@@ -27,6 +36,9 @@ public class RepairStation : MonoBehaviour
                 respawnPoint = transform.position;  // save this as respawn point
                 holdTimer = 0f;
                 Debug.Log("Suit repaired. Respawn point saved.");
+
+                if (audioSource != null && repairSound != null)
+                    audioSource.PlayOneShot(repairSound);
             }
         }
         else

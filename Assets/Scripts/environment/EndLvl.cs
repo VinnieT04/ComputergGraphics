@@ -18,7 +18,9 @@ public class LevelEnd : MonoBehaviour
     void OnLevelEnd()
     {
         // CINEMATIC HOOK — teammate plugs their system in here
-        // For now just loads next scene directly
-        SceneManager.LoadScene(nextSceneName);
+        if (MusicManager.Instance != null)
+            MusicManager.Instance.PlayEndSequence(nextSceneName);
+        else
+            SceneManager.LoadScene(nextSceneName); // fallback si no hay MusicManager
     }
 }
