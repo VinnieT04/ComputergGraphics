@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
+    
     void Update()
     {
         DrainOxygen();
@@ -51,6 +52,9 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+
+    public float GetSuitIntegrity() => currentSuitIntegrity;
+    public float GetOxygen() => currentOxygen;
     public void RepairSuit()
     {
         currentSuitIntegrity = maxSuitIntegrity;
